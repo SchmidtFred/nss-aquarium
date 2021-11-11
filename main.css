@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  background-color: aqua;
+}
+header {
+  background-color: aqua;
+  color: blue;
+  text-align: center;
+}
+
+main {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+ul {
+  text-align: left;
+}
+
+/* These are the flex children of the container above */
+.fishList {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  border: solid 2px blue;
+  flex-basis: 66%;
+}
+
+.locationContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: solid 2px green;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 33%;
+}
+
+/* flex children of .fishList */
+.fishCard {
+  display: flex;
+  border: solid 2px red;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/* flex children and content of each fishCard */
+.fishCard img {
+  flex-basis: 25%;
+}
+
+.fishDetails {
+  flex-basis: 50%;
+  font-size: 100%;
+}
+
+.careTips {
+  flex-basis: 25%;
+  background-color: rgb(128, 211, 183);
+  font-size: small;
+}
+
+/* flex children of .locationContent */
+.locationList {
+  border: solid 2px blue;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  flex-basis: 75%;
+}
+
+.quoteList {
+  border: solid 2px red;
+  flex-basis: 25%;
+}
+
+/* flex children of .locationList */
+.locationCard {
+  border: solid 2px green;
+  display: flex;
+  justify-content: stretch;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
