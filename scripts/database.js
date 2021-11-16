@@ -20,7 +20,7 @@ const database = {
       name: "McFishums",
       species: "Purplus Fishicus",
       food: "Lesser Fish",
-      size: "Long Enough",
+      size: 15,
       location: "MS Paint",
       careTip1:
         "Do not let it get too close to other fish, as it will devour them whole.",
@@ -34,7 +34,7 @@ const database = {
       name: "JoeFish",
       species: "Scalium Fishicus",
       food: "Warmed Up Popcorn",
-      size: "Just Right",
+      size: 7,
       location: "My Other Island",
       careTip1: "Do Not Navigate With Your Mouse Near This Fish!",
       careTip2: "Allergic to Miro",
@@ -47,7 +47,7 @@ const database = {
       name: "Charlie",
       species: "Pink Fish",
       food: "TetraMin Tropical Flakes",
-      size: "Chonk",
+      size: 40,
       location: "My Island",
       careTip1: "Prefers small enclosed spaces.",
       careTip2:
@@ -56,6 +56,42 @@ const database = {
   ],
 };
 
+
+export const mostHolyFish = (fish) => {
+    const holyFish = [];
+
+    for (const item of fish) {
+        if (item.size % 3 === 0) {
+            holyFish.push(item);
+        }
+    }
+
+    return holyFish;
+}
+
+export const soldierFish = (fish) => {
+    const soldiers = [];
+
+    for (const item of fish) {
+        if (item.size % 5 === 0 && item.size % 3 != 0) {
+            soldiers.push(item);
+        }
+    }
+
+    return soldiers;
+}
+
+export const nonHolyFish = (fish) => {
+    const regularFish = [];
+
+    for (const item of fish) {
+        if (item.size % 3 != 0 && item.size % 5 != 0) {
+            regularFish.push(item);
+        }
+    }
+
+    return regularFish;
+}
 //allows us to export this database to other js files
 export const getFish = () => {
   return database.fish.map((fish) => ({ ...fish }));
