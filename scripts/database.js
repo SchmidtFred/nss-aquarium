@@ -75,6 +75,35 @@ const database = {
 				"The hat must be cleaned regularly. Care should be taken when removing it as the fish is extremely territorial."
 			]
 		}
+	],
+	locationQuotes: [
+		"Never met a fish I didn't harvest",
+		"The catfish here actually purred",
+		"Hello, I'm Martin"
+	],
+	locations: [
+		{
+			id: 1,
+			image: "images/location.jpg",
+			altText:
+				"A grassy island surounded by a beach. A boat sails just off the shore.",
+			location: "My Island",
+			coordinates: "<strong>REDACTED</strong>"
+		},
+		{
+			id: 2,
+			image: "images/otherIsland.jpg",
+			altText: "A grassy island with a brick house and pink truck.",
+			location: "My Other Island",
+			coordinates: "<em>Nearby</em>"
+		},
+		{
+			id: 3,
+			image: "images/lake.jpg",
+			altText: "A lake surrounded by woods.",
+			location: "Lake Yikes",
+			coordinates: "Somewhere In Alaska"
+		}
 	]
 };
 
@@ -85,4 +114,14 @@ export const getFish = () => {
 
 export const getTips = () => {
 	return database.tips.map((tip) => ({ ...tip }));
+};
+
+
+//no map here because i am just returning an array of quotes
+export const getLocQuotes = () => {
+	return database.locationQuotes;
+};
+
+export const getLocations = () => {
+	return database.locations.map((location) => ({ ...location }));
 };
