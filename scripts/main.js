@@ -11,6 +11,18 @@ for (const fish of allFish) {
 //bring in the fishlist function now
 import { FishList } from "./fish/fishList.js";
 
-const parentHTMLElement = document.querySelector(".fishList");
+const fishListHTMLElement = document.querySelector(".fishList");
 
-parentHTMLElement.innerHTML = FishList();
+fishListHTMLElement.innerHTML = FishList();
+
+//same for quotes on locations
+import { quoteList } from "./locations/locationList.js";
+
+const locationContentHTMLElement = document.querySelector(".locationContent");
+
+locationContentHTMLElement.innerHTML +=  quoteList();
+
+//now the location cards to add to the locationcontent html
+import { locationList } from "./locations/locationList.js";
+
+locationContentHTMLElement.innerHTML += locationList();
