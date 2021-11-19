@@ -9,7 +9,7 @@ for (const fish of allFish) {
 };
 
 //bring in the fishlist function now
-import { FishList } from "./fishList.js";
+import { FishList } from "./fish/fishList.js";
 
 const parentHTMLElement = document.querySelector(".fishList");
 

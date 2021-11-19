@@ -1,8 +1,9 @@
 // Import the function that returns a copy of the fish array
-import { getFish } from "./database.js";
-import { mostHolyFish } from "./database.js";
-import { soldierFish } from "./database.js";
-import { nonHolyFish } from "./database.js";
+import { getFish } from "../database.js";
+import { mostHolyFish } from "./fishCategories.js";
+import { soldierFish } from "./fishCategories.js";
+import { nonHolyFish } from "./fishCategories.js";
+import { tipList } from "../tips/tipList.js";
 
 export const FishList = () => {
   //store our database in this variable. Using the imported function to bring that array over here.
@@ -25,10 +26,7 @@ export const FishList = () => {
                 <li>Food: ${fish.food}</li>
             </ul>
         </section>
-        <section class="careTips">
-            <p>${fish.careTip1}</p>
-            <p>${fish.careTip2}</p>
-        </section>
+        ${tipList(fish.id, fish.name)}
         </section>
         `;
     }
